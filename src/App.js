@@ -1,11 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useEffect, useState} from 'react';
+import {getStoryIds} from './services/hackerNewsAPI';
 
-function App() {
-  return (
-    <div><p>Hello World</p></div>
-  );
-}
+export const App = () => {
+  const [storyIds, setStoryIds] = useState([]);
+
+  useEffect(() => {
+    getStoryIds().then(data => setStoryIds(data))
+  }, []);
+
+  return <p>{JSON.stringify(storyIds)}</p>;
+};
 
 export default App;
 
