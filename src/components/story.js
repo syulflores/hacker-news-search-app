@@ -1,5 +1,5 @@
 import React, { useState, useEffect, memo } from 'react';
-import { getStory } from '../services/hnApi';
+import { getStory } from '../services/hackerNewsAPI';
 import {
   StoryWrapper,
   StoryTitle,
