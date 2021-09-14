@@ -1,5 +1,5 @@
 import React, { useState, useEffect, memo } from 'react';
-import { getStory } from '../services/hackerNewsAPI';
+import { getStory } from '../services/hnApi';
 import {
   StoryWrapper,
   StoryTitle,
@@ -22,10 +22,10 @@ export const Story = memo(function Story({ storyId }) {
       </StoryTitle>
       <StoryMeta>
         <span data-testid="story-by">
-          <StoryMetaElement color="#000">By:</StoryMetaElement> {story.by}
+          <StoryMetaElement color="#000"></StoryMetaElement> {story.by}
         </span>
         <span data-testid="story-time">
-          <StoryMetaElement color="#000">Posted:</StoryMetaElement> {` `}
+          <StoryMetaElement color="#000">|</StoryMetaElement> {` `}
           {mapTime(story.time)}
         </span>
       </StoryMeta>

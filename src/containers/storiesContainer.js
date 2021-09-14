@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getStoryIds } from '../services/hackerNewsAPIi';
+import { getStoryIds } from '../services/hnApi';
 import { Story } from '../components/Story';
 import {
   GlobalStyle,
